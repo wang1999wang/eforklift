@@ -1,0 +1,235 @@
+{yun:}include file="$tplstyle/header.htm"{/yun}
+
+<link href="{yun:}$style{/yun}/css/style.css" rel="stylesheet" type="text/css" />
+<link href="{yun:}$style{/yun}/css/jquery.fullpage.css" rel="stylesheet" type="text/css" />
+<script src="{yun:}$style{/yun}/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="{yun:}$style{/yun}/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+<script src="{yun:}$style{/yun}/js/jquery.fullpage.min.js" type="text/javascript"></script>
+<script src="{yun:}$style{/yun}/js/public.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="{yun:}$style{/yun}/css/pro.css">
+<script type="text/javascript" src="{yun:}$style{/yun}/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{yun:}$style{/yun}/js/script.js"></script>
+
+<link type="text/css" href="{yun:}$style{/yun}/css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="{yun:}$style{/yun}/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="{yun:}$style{/yun}/js/jquery-ui-1.8.10.custom.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // Slider
+        var cururl_fuzai = "{yun:}searchurl m=cars untype='fuzai,nid' fuzai='a'{/yun}";
+        var cururl_gaodu = "{yun:}searchurl m=cars untype='tishenggaodu,nid' tishenggaodu='a'{/yun}";
+        window.oldfuzai = '{yun:}if $get.fuzai&&$get.fuzai>=1&&$get.fuzai<=15{/yun}{yun:}$get.fuzai{/yun}{yun:}else{/yun}1{yun:}/if{/yun}';
+        window.nowfuzai = window.oldfuzai;
+        $('#slider_fuzai').slider({
+            value: window.oldfuzai,
+            min: 1,
+            max: 15,
+            step: 1,
+            range: "min",
+            slide: function (event, ui) {
+                $('#slider_fuzai .ui-state-default').html(ui.value);
+            },
+            change: function (event, ui) {
+                location.href = cururl_fuzai.replace('fuzai=a', 'fuzai=' + ui.value);
+            }
+        });
+        $('#slider_fuzai .ui-state-default').html(window.oldfuzai);
+
+        window.oldgaodu = '{yun:}if $get.tishenggaodu&&$get.tishenggaodu>=1&&$get.tishenggaodu<=15{/yun}{yun:}$get.tishenggaodu{/yun}{yun:}else{/yun}1{yun:}/if{/yun}';
+        window.nowgaodu = window.oldfuzai;
+        $('#slider_gaodu').slider({
+            value: window.oldgaodu,
+            min: 1,
+            max: 15,
+            step: 1,
+            range: "min",
+            slide: function (event, ui) {
+                $('#slider_gaodu .ui-state-default').html(ui.value);
+            },
+            change: function (event, ui) {
+                location.href = cururl_gaodu.replace('tishenggaodu=a', 'tishenggaodu=' + ui.value);
+            }
+        });
+        $('#slider_gaodu .ui-state-default').html(window.oldgaodu);
+    });
+</script>
+<style type="text/css">
+    /*demo page css*/
+    body {
+        font: 62.5% "Trebuchet MS", sans-serif;
+        /*margin: 50px;*/
+    }
+
+    .demoHeaders {
+        margin-top: 2em;
+    }
+
+    #dialog_link {
+        padding: .4em 1em .4em 20px;
+        text-decoration: none;
+        position: relative;
+    }
+
+        #dialog_link span.ui-icon {
+            margin: 0 5px 0 0;
+            position: absolute;
+            left: .2em;
+            top: 50%;
+            margin-top: -8px;
+        }
+
+    ul#icons {
+        margin: 0;
+        padding: 0;
+    }
+
+        ul#icons li {
+            margin: 2px;
+            position: relative;
+            padding: 4px 0;
+            cursor: pointer;
+            float: left;
+            list-style: none;
+        }
+
+        ul#icons span.ui-icon {
+            float: left;
+            margin: 0 4px;
+        }
+    .select .select-list{height:30px;}
+    .ui-slider {
+        margin: 5px 0 0 10px;
+    }
+</style>	
+
+	{yun:}assign var=curr value=2{/yun}
+
+{yun:}include file="$tplstyle/top.htm"{/yun}	
+	
+<div align="center" class="pro_bj">
+    <h0>产品 挑选器</h0>
+    <!--////////////////////////////////////// 代码开始 www.16css.com ///////////////////////////////////////-->
+
+    <ul class="select">
+        <li class="select-list">
+            <dl id="select1">
+                <dt>品牌：</dt>
+                <dd href="{yun:}searchurl m=cars untype='pinpai'{/yun}" class="select-all Search_jobs_sub_a {yun:}if $get.pinpai==''{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars untype='pinpai'{/yun}">全部</a></dd>
+                {yun:}foreach from=$comdata.chache_pinpai item=v key=key{/yun}
+                <dd class="{yun:}if $get.pinpai==$v{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars pinpai=$v untype='pinpai,nid'{/yun}">{yun:}$comclass_name[$v]{/yun}</a></dd>
+                {yun:}/foreach{/yun}
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select2">
+                <dt>类型：</dt>
+                <dd href="{yun:}searchurl m=cars untype='leixing'{/yun}" class="select-all  Search_jobs_sub_a {yun:}if $get.leixing==''{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars untype='leixing'{/yun}">全部</a></dd>
+                {yun:}foreach from=$comdata.chache_leixing item=v key=key{/yun}
+                <dd class="{yun:}if $get.leixing==$v{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars leixing=$v untype='leixing,nid'{/yun}">{yun:}$comclass_name[$v]{/yun}</a></dd>
+                {yun:}/foreach{/yun}
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select3">
+                <dt>动力源：</dt>
+                <dd href="{yun:}searchurl m=cars untype='dongliyuan'{/yun}" class="select-all  Search_jobs_sub_a {yun:}if $get.dongliyuan==''{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars untype='dongliyuan'{/yun}">全部</a></dd>
+                {yun:}foreach from=$comdata.chache_dongliyuan item=v key=key{/yun}
+                <dd class="{yun:}if $get.dongliyuan==$v{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars dongliyuan=$v untype='dongliyuan,nid'{/yun}">{yun:}$comclass_name[$v]{/yun}</a></dd>
+                {yun:}/foreach{/yun}
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select4">
+                <dt>工作场地：</dt>
+                <dd href="{yun:}searchurl m=cars untype='gongzuochangdi'{/yun}" class="select-all  Search_jobs_sub_a {yun:}if $get.gongzuochangdi==''{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars untype='gongzuochangdi'{/yun}">全部</a></dd>
+                {yun:}foreach from=$comdata.chache_gongzuochangdi item=v key=key{/yun}
+                <dd class="{yun:}if $get.gongzuochangdi==$v{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars gongzuochangdi=$v untype='gongzuochangdi,nid'{/yun}">{yun:}$comclass_name[$v]{/yun}</a></dd>
+                {yun:}/foreach{/yun}
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select5">
+                <dt>负载（吨）：</dt>
+                <div id="slider_fuzai" style="float:left; width:50%;"></div>
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select6">
+                <dt>提升高度（米）：</dt>
+                <div id="slider_gaodu" style="float:left; width:50%;"></div>
+            </dl>
+        </li>
+        <li class="select-result">
+            <dl>
+                <dt>已选条件：</dt>
+                {yun:}if $comclass_name[$get.pinpai]{/yun}
+                <a href="{yun:}searchurl m=cars untype='pinpai'{/yun}" class="Search_jobs_c_a disc_fac">品牌：{yun:}$comclass_name[$get.pinpai]{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $comclass_name[$get.leixing]{/yun}
+                <a href="{yun:}searchurl m=cars untype='leixing'{/yun}" class="Search_jobs_c_a disc_fac">类型：{yun:}$comclass_name[$get.leixing]{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $comclass_name[$get.dongliyuan]{/yun}
+                <a href="{yun:}searchurl m=cars untype='dongliyuan'{/yun}" class="Search_jobs_c_a disc_fac">动力源：{yun:}$comclass_name[$get.dongliyuan]{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $comclass_name[$get.gongzuochangdi]{/yun}
+                <a href="{yun:}searchurl m=cars untype='gongzuochangdi'{/yun}" class="Search_jobs_c_a disc_fac">工作场地：{yun:}$comclass_name[$get.gongzuochangdi]{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $get.fuzai{/yun}
+                <a href="{yun:}searchurl m=cars untype='fuzai'{/yun}" class="Search_jobs_c_a disc_fac">负载：{yun:}$get.fuzai{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $get.tishenggaodu{/yun}
+                <a href="{yun:}searchurl m=cars untype='tishenggaodu'{/yun}" class="Search_jobs_c_a disc_fac">提升高度：{yun:}$get.tishenggaodu{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if !($comclass_name[$get.pinpai]||$comclass_name[$get.leixing]||$get.fuzai||$comclass_name[$get.dongliyuan]||$comclass_name[$get.gongzuochangdi]||$get.tishenggaodu){/yun}
+                <dd class="select-no">暂时没有选择过滤条件</dd>
+                {yun:}/if{/yun}
+            </dl>
+        </li>
+    </ul>
+
+    <!--////////////////////////////////////// 代码结束 www.16css.com ///////////////////////////////////////-->
+    <ul id="breadcrumb">
+        <li><a href="javascript:;"></a></li>
+        <li><a href="{yun:}searchurl m=cars nid=1 untype='nid'{/yun}">热门车型</a></li>
+        <li><a href="{yun:}searchurl m=cars nid=2 untype='nid'{/yun}">促销车型</a></li>
+        <li><a href="javascript:;"></a></li>
+    </ul>
+</div>
+
+<div class="news">
+		    <ul>
+        <li class="b1" id="pro1">
+            <div class="news_in">
+                <div class="news_title">{yun:}if $get.nid==1{/yun}热门车型{yun:}elseif $get.nid==2{/yun}促销车型{yun:}else{/yun}叉车家族{yun:}/if{/yun}</div>
+                <div class="news_resource">
+                    <ul>
+                        {yun:}carslist nid='auto.nid' ispage=1 urlstatic=1 limit=6  t_len=30 item=cars pinpai='auto.pinpai' leixing='auto.leixing' fuzai='auto.fuzai' dongliyuan='auto.dongliyuan' gongzuochangdi='auto.gongzuochangdi' tishenggaodu='auto.tishenggaodu' order=sort sort=asc{/yun}
+                        <li>
+                            <a href="{yun:}$cars.url{/yun}"><img src="{yun:}formatpicurl path=$cars.newsphoto{/yun}" width="346" height="218" /></a>
+                            <span class="news_txt">
+                                <h1><a href="{yun:}$cars.url{/yun}" title="{yun:}$cars.title{/yun}">{yun:}$cars.title{/yun}</a></h1>
+                            </span>
+                        </li>
+                            {yun:}/carslist{/yun}
+</ul>
+
+                    <div class="page">
+                        <a href="{yun:}if $get.page>1{/yun}{yun:}searchurl m=cars page=$get.page-1 untype='page'{/yun}{yun:}else{/yun}javascript:;{yun:}/if{/yun}" class="pre"><img src="{yun:}$style{/yun}/picture/pre_1.png" width="117" height="36" /></a>
+                        <a href="{yun:}if !$get.page&&$pages>1{/yun}{yun:}searchurl m=cars page=2 untype='page'{/yun}{yun:}elseif $get.page<$pages{/yun}{yun:}searchurl m=cars page=$get.page+1 untype='page'{/yun}{yun:}else{/yun}javascript:;{yun:}/if{/yun}" class="next"><img src="{yun:}$style{/yun}/picture/next_1.png" width="113" height="36" /></a>
+                    </div>
+                </div>
+            </div>
+        </li>
+			</ul>
+		</div>
+	<style>
+        .news .page {
+            float: right;
+            margin: 26px 153px 0 0;
+            width: 300px;
+        }
+    </style>
+<div class="clear"></div>
+<!--content结束-->
+{yun:}include file="$tplstyle/footer.htm"{/yun}
