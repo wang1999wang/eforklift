@@ -1,3 +1,7 @@
+{yun:}assign var=title value=$Info.title|cat:"_"|cat:$Info.class_name|cat:"_E叉活动-E叉租赁网-一站式叉车租赁综合交易平台"{/yun}
+{yun:}assign var=keywords value=""{/yun}
+{yun:}assign var=description value=""{/yun}
+
 {yun:}include file="$tplstyle/header.htm"{/yun}
 
 {yun:}assign var=curr value=1{/yun}
@@ -7,7 +11,7 @@
         <ul>
             <li class="b3">
                 <div class="news_in">
-                    <div class="news_detail_position"><a href="{yun:}$config.sy_weburl{/yun}">首页</a> 〉<a href="{yun:}url m=article nid=$Info.nid{/yun}">{yun:}$Info.class_name{/yun}</a> 〉<a href="{yun:}url m=school c=show id=$Info.id{/yun}">{yun:}$Info.title{/yun}</a></div>
+                    <div class="news_detail_position"><a href="{yun:}$config.sy_weburl{/yun}">首页</a> 〉<a href="{yun:}url m=article nid=$Info.nid{/yun}">{yun:}$Info.class_name{/yun}</a> 〉<a href="{yun:}url m=article c=show id=$Info.id{/yun}">{yun:}$Info.title{/yun}</a></div>
                     <div class="news_detail_title">{yun:}$Info.title{/yun}</div>
                     <div class="news_detail">
                         <div class="news_detail_left">

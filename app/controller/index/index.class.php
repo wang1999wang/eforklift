@@ -41,6 +41,7 @@ class index_controller extends common{
             $news_nopic_list=$M->DB_select_all('news_base','`nid` in ('.$v1['id'].') and id not in ('.implode(',',$NIDList).') and FIND_IN_SET(\'indextj\',`describe`) order by lastupdate desc limit 4');
             foreach($news_nopic_list as $k2=>$v2){
                 $news_nopic_list[$k2]['class_name']=$v1['name'];
+                $news_nopic_list[$k2]['title']=mb_substr($v2['title'],0,12,'gbk');
             }
             $dongtai_class_list[$k1]['nopic']=$news_nopic_list;
             $dongtai_class_list[$k1]['pic']=$news_pic_list;

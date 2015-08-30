@@ -1,3 +1,17 @@
+{yun:}if $get.nid==1{/yun}
+{yun:}assign var=title value="热门车型_E叉租赁网-一站式叉车租赁综合交易平台"{/yun}
+{yun:}assign var=keywords value="E叉租赁网提供快速便捷查询所需车型叉车，七大高端进口品牌，七大车型，全方面需求，高效极低故障运行。选择渠道广，租的更放心!"{/yun}
+{yun:}assign var=description value="E叉租赁网提供各种类型的热门叉车，多种租赁组合，快速解决租赁困难。"{/yun}
+{yun:}elseif $get.nid==2{/yun}
+{yun:}assign var=title value="促销车型_E叉租赁网-一站式叉车租赁综合交易平台"{/yun}
+{yun:}assign var=keywords value=""{/yun}
+{yun:}assign var=description value="E叉租赁网提供各种叉车促销车型，叉车分类多，选择租赁叉车选择E叉租赁。"{/yun}
+{yun:}else{/yun}
+{yun:}assign var=title value="叉车家族_七大品牌_七大车型在线快捷查询_E叉租赁网-一站式叉车租赁综合交易平台"{/yun}
+{yun:}assign var=keywords value=""{/yun}
+{yun:}assign var=description value="E叉租赁网提供快速便捷查询所需车型叉车，七大高端进口品牌，七大车型，全方面需求，高效极低故障运行。选择渠道广，租的更放心!"{/yun}
+{yun:}/if{/yun}
+
 {yun:}include file="$tplstyle/header.htm"{/yun}
 
 <link href="{yun:}$style{/yun}/css/style.css" rel="stylesheet" type="text/css" />
@@ -17,41 +31,46 @@
 <script type="text/javascript">
     $(function () {
         // Slider
-        var cururl_fuzai = "{yun:}searchurl m=cars untype='fuzai,nid' fuzai='a'{/yun}";
-        var cururl_gaodu = "{yun:}searchurl m=cars untype='tishenggaodu,nid' tishenggaodu='a'{/yun}";
-        window.oldfuzai = '{yun:}if $get.fuzai&&$get.fuzai>=1&&$get.fuzai<=15{/yun}{yun:}$get.fuzai{/yun}{yun:}else{/yun}1{yun:}/if{/yun}';
-        window.nowfuzai = window.oldfuzai;
-        $('#slider_fuzai').slider({
-            value: window.oldfuzai,
-            min: 1,
-            max: 15,
-            step: 1,
-            range: "min",
-            slide: function (event, ui) {
-                $('#slider_fuzai .ui-state-default').html(ui.value);
-            },
-            change: function (event, ui) {
-                location.href = cururl_fuzai.replace('fuzai=a', 'fuzai=' + ui.value);
-            }
-        });
-        $('#slider_fuzai .ui-state-default').html(window.oldfuzai);
+        var cururl_fuzai = "{yun:}searchurl m=cars untype='fuzai,nid,fuzai_min' fuzai='a' fuzai_min='a'{/yun}";
+        var cururl_gaodu = "{yun:}searchurl m=cars untype='tishenggaodu,nid,tishenggaodu_min' tishenggaodu='a' tishenggaodu_min='a'{/yun}";
 
-        window.oldgaodu = '{yun:}if $get.tishenggaodu&&$get.tishenggaodu>=1&&$get.tishenggaodu<=15{/yun}{yun:}$get.tishenggaodu{/yun}{yun:}else{/yun}1{yun:}/if{/yun}';
-        window.nowgaodu = window.oldfuzai;
-        $('#slider_gaodu').slider({
-            value: window.oldgaodu,
-            min: 1,
-            max: 15,
-            step: 1,
-            range: "min",
+        $('#slider_fuzai').slider({
+            values: [{yun:}$get.fuzai_min{/yun}, {yun:}$get.fuzai{/yun}],
+            min: 0,
+        max: 15,
+        step: 1,
+            range: true,
             slide: function (event, ui) {
-                $('#slider_gaodu .ui-state-default').html(ui.value);
+                $('#slider_fuzai .ui-state-default:eq(0)').html(ui.values[0]);
+                $('#slider_fuzai .ui-state-default:eq(1)').html(ui.values[1]);
             },
             change: function (event, ui) {
-                location.href = cururl_gaodu.replace('tishenggaodu=a', 'tishenggaodu=' + ui.value);
+                location.href = cururl_fuzai.replace('fuzai_min=a', 'fuzai_min=' + ui.values[0]).replace('fuzai=a', 'fuzai=' + ui.values[1]);
             }
         });
-        $('#slider_gaodu .ui-state-default').html(window.oldgaodu);
+    $('#slider_fuzai .ui-state-default:eq(0)').html('{yun:}$get.fuzai_min{/yun}');
+    $('#slider_fuzai .ui-state-default:eq(1)').html('{yun:}$get.fuzai{/yun}');
+    $('#slider_fuzai .ui-state-default:eq(0)').css('left','{yun:}$fuzai_min_per{/yun}');
+    $('#slider_fuzai .ui-state-default:eq(1)').css('left','{yun:}$fuzai_per{/yun}');
+
+        $('#slider_gaodu').slider({
+            values: [{yun:}$get.tishenggaodu_min{/yun}, {yun:}$get.tishenggaodu{/yun}],
+            min: 0,
+            max: 15,
+            step: 1,
+            range: true,
+            slide: function (event, ui) {
+                $('#slider_gaodu .ui-state-default:eq(0)').html(ui.values[0]);
+                $('#slider_gaodu .ui-state-default:eq(1)').html(ui.values[1]);
+            },
+            change: function (event, ui) {
+                location.href = cururl_gaodu.replace('tishenggaodu_min=a', 'tishenggaodu_min=' + ui.values[0]).replace('tishenggaodu=a', 'tishenggaodu=' + ui.values[1]);
+            }
+        });
+    $('#slider_gaodu .ui-state-default:eq(0)').html('{yun:}$get.tishenggaodu_min{/yun}');
+    $('#slider_gaodu .ui-state-default:eq(1)').html('{yun:}$get.tishenggaodu{/yun}');
+        $('#slider_gaodu .ui-state-default:eq(0)').css('left','{yun:}$tishenggaodu_min_per{/yun}');
+        $('#slider_gaodu .ui-state-default:eq(1)').css('left','{yun:}$tishenggaodu_per{/yun}');
     });
 </script>
 <style type="text/css">
@@ -176,10 +195,10 @@
                 <a href="{yun:}searchurl m=cars untype='gongzuochangdi'{/yun}" class="Search_jobs_c_a disc_fac">工作场地：{yun:}$comclass_name[$get.gongzuochangdi]{/yun}</a>
                 {yun:}/if{/yun}
                 {yun:}if $get.fuzai{/yun}
-                <a href="{yun:}searchurl m=cars untype='fuzai'{/yun}" class="Search_jobs_c_a disc_fac">负载：{yun:}$get.fuzai{/yun}</a>
+                <a href="{yun:}searchurl m=cars untype='fuzai'{/yun}" class="Search_jobs_c_a disc_fac">负载：{yun:}$get.fuzai_min{/yun}-{yun:}$get.fuzai{/yun}</a>
                 {yun:}/if{/yun}
                 {yun:}if $get.tishenggaodu{/yun}
-                <a href="{yun:}searchurl m=cars untype='tishenggaodu'{/yun}" class="Search_jobs_c_a disc_fac">提升高度：{yun:}$get.tishenggaodu{/yun}</a>
+                <a href="{yun:}searchurl m=cars untype='tishenggaodu'{/yun}" class="Search_jobs_c_a disc_fac">提升高度：{yun:}$get.tishenggaodu_min{/yun}-{yun:}$get.tishenggaodu{/yun}</a>
                 {yun:}/if{/yun}
                 {yun:}if !($comclass_name[$get.pinpai]||$comclass_name[$get.leixing]||$get.fuzai||$comclass_name[$get.dongliyuan]||$comclass_name[$get.gongzuochangdi]||$get.tishenggaodu){/yun}
                 <dd class="select-no">暂时没有选择过滤条件</dd>
@@ -204,7 +223,7 @@
                 <div class="news_title">{yun:}if $get.nid==1{/yun}热门车型{yun:}elseif $get.nid==2{/yun}促销车型{yun:}else{/yun}叉车家族{yun:}/if{/yun}</div>
                 <div class="news_resource">
                     <ul>
-                        {yun:}carslist nid='auto.nid' ispage=1 urlstatic=1 limit=6  t_len=30 item=cars pinpai='auto.pinpai' leixing='auto.leixing' fuzai='auto.fuzai' dongliyuan='auto.dongliyuan' gongzuochangdi='auto.gongzuochangdi' tishenggaodu='auto.tishenggaodu' order=sort sort=asc{/yun}
+                        {yun:}carslist nid='auto.nid' ispage=1 urlstatic=1 limit=6  t_len=30 item=cars pinpai='auto.pinpai' leixing='auto.leixing' fuzai='auto.fuzai' fuzai_min='auto.fuzai_min' dongliyuan='auto.dongliyuan' gongzuochangdi='auto.gongzuochangdi' tishenggaodu='auto.tishenggaodu' tishenggaodu_min='auto.tishenggaodu_min' order=sort sort=asc{/yun}
                         <li>
                             <a href="{yun:}$cars.url{/yun}"><img src="{yun:}formatpicurl path=$cars.newsphoto{/yun}" width="346" height="218" /></a>
                             <span class="news_txt">

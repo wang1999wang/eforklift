@@ -71,8 +71,8 @@ $('.num').eq(5).find('pp').animate({'top':'50%'},500);
 $('.ddw').val(b);
 $('.fixed_r li').eq(-b).addClass('on').siblings('li').removeClass('on');
 var single_hh = $(window).height();
-click_hh =-single_hh*b;
-$('.num_box').animate({'bottom': click_hh},1000);
+click_hh=(-b==ROLLNU)?(-single_hh*(b+1))+110:-single_hh*b;
+$('.num_box').animate({'bottom': click_hh},600);
 setTimeout(function(){
 	$('.ddw2').val(0);
 	},1400);
@@ -125,14 +125,14 @@ $('.num').eq(5).find('pp').animate({'top':'50%'},500);
 /*---------------------*/
 
 var single_hh = $(window).height();
-click_hh =single_hh*b;
-$('.num_box').animate({'bottom': click_hh},1000);
+click_hh=(b==ROLLNU)?(single_hh*(b-1))+110:single_hh*b;
+$('.num_box').animate({'bottom': click_hh},600);
 		})
 function quanp(){
 var single_hh = $(window).height();
 var single_ww = $(window).width();
 $('.num').height(single_hh);
-$('.num li').width(single_ww);
+//$('.num li').width(single_ww);
 }
 quanp();
 $(window).resize(function(){

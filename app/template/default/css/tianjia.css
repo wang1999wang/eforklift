@@ -31,11 +31,17 @@ input::-ms-clear{display:none;}
 .fixed_r li{width:10px;height:10px;border-bottom:1px solid #ccc;line-height:40px;color:#333;font-size:16px;text-align:center;cursor:pointer;border-radius:50%; font-size:0; margin-top:6px; border:1px solid #FFF;}
 .fixed_r li.on{background:#fff;}
 
-
-.footerall{position:absolute;z-index:999;bottom:0px; height:110px; background:#000; width:100%;}
+.msg_qq {
+	width: 20%;
+	height: 300px;
+	top: 25%;
+	position: absolute;
+	right: 17%
+}
+.footerall{bottom:0px; height:110px; background:#000; width:100%;}
 .footer{ width:100%; height:110px; background:#000; font-size:14px;color:#8a8a8a;}
 .wd{ width:1100px; margin:0 auto;}
-.footer_allone{ position:relative;}
+.footer_allone {position: relative;width:70%;margin: 0 auto;}
 .footer_nav{ padding-top:14px; color:#8a8a8a; font-size:14px;}
 .footer_nav a{ margin:0 5px; padding:0 3px;color:#8a8a8a;}
 .footer_alltwo{color:#8a8a8a; font-size:14px; margin-top:6px;}
@@ -54,11 +60,11 @@ input::-ms-clear{display:none;}
 /*在线留言*/
 /***********************/
 
-.area-sixth{width: 100%;height: 609px;	background: #F9F9F9;	position: relative;	z-index: 1;}
+.area-sixth{width: 100%;height: 609px;	background: #F9F9F9;	z-index: 1;}
 
 .areasix-wrap{	width: 1000px;	margin: 0px auto;	position: relative;}
 
-.areasix-wrap .areasix-top{	text-align: center;	padding-top:50px;	padding-bottom: 52px;}
+.areasix-wrap .areasix-top{	text-align: center;	padding-bottom: 20px;}
 
 .areasix-top .areasix-tit{
 
@@ -129,21 +135,12 @@ input::-ms-clear{display:none;}
 }
 
 .areasix-wrap  .areasix-form{
-
 	padding-left: 100px;
-
 	padding-top: 15px;
-
 	padding-right: 180px;
-
 	width: 720px;
-
-	height: 437px;
-
 	overflow: hidden;
-
 	background: url(../images/img_72.png) no-repeat center top;
-
 	position: relative;
 
 }
@@ -260,23 +257,18 @@ input::-ms-clear{display:none;}
 
 }
 
+.tianjia-one{}
+.tianjia-two{ position:absolute; top:50%; height:320px; margin-top:-190px; left:0; right:0;}
 .areasix-form table td.form-text textarea{
-
 	float: left;
-
 	display: inline-block;
-
 	width: 490px;
-
-	height: 146px;
-
+	height: 80px;
 	border: 1px solid #e0e0e0;
-
 	background: #fff;
-
 	padding: 5px;
-
 }
+.areasix-form table td.form-text textarea#content{ width:800px;}
 
 .areasix-form table td.form-inputfou input{
 
@@ -498,3 +490,94 @@ input::-ms-clear{display:none;}
 .vivo-menu-series dl dd a:hover h2,.vivo-menu-series dl dd a.current h2{color: #fff;}
 
 
+ .wrapper {width:100%;margin:0 auto;position:relative;}
+ #page_3 {width:100%;height:846px;background:#f2f2f2;overflow:hidden;position:relative;}
+ #page_3_img {display:block;position:relative; }
+ #page_3_img li {position:absolute;top:0;left:0;width:100%;height:846px;background-position:center;background-size:cover;display:none}
+ #page_3_img li.item1{background-image:#f2f2f2;display:block}
+
+ .ad_img {position:absolute;right:10px;top:77px;width:506px;height:600px;background:url(../images/brand_process.png) no-repeat scroll center center;width:100%;overflow:hidden}
+ #page_3_ctr {position:absolute;margin-left:-480px;z-index:1}
+ #page_3_ctr ul {position:relative}
+ #page_3_ctr li {display:block;float:left;cursor:pointer;margin-right:24px;height: 64px;}
+
+ #page_3_ctr li.last-item {width:76px;cursor:pointer;margin-right:0}
+ #drag_ctr {position:absolute;top:-14px;left:0;width:78px;height:156px;bottom:170px;}
+ #drag_arrow {position:absolute;top:-14px;left:0;width:78px;height:156px;}
+
+ .page_4{width:100%;background:#44bcbc;height:867px}
+ .page_4_1{width:100%;background:url(../images/brand_bg.png) repeat-y scroll center center;height:867px;position:relative;}
+ .page_nav{color:#fff;font-size:20px;padding-bottom:44px}
+ .page_nav a{color:#fff;}
+ .page_nav ul{padding-left:0;}
+ .page_nav li{display:inline;cursor: pointer;float:left;width:245px;border:3px solid #fff;margin-right:166px;height:37px;line-height:37px;text-align:center;}
+ .page_nav li a{color:#fff}
+ .page_nav .curr{background:#149c9c;border:3px solid #149c9c}
+ 
+/*ppt banner eg*/
+.hhr-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-hhr1900.jpg); background-size:cover;background-position:center;}
+.hhr-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-hhr1900.jpg); background-size:cover;background-position:center;}
+.eg-banner1{ background-image:url(http://www.e-forklift.cn/app/template/default/images/1-eg1900.jpg); background-size:cover;background-position:center;}
+.eg-banner2{ background-image:url(http://www.e-forklift.cn/app/template/default/images/2-eg1900.jpg); background-size:cover;background-position:center;}
+.lxwm-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-lx1900.jpg);background-size:cover;background-position:center;}
+.lxwm-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-lx1900.jpg);background-size:cover;background-position:center;}
+.lxwm-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-lx1900.jpg);background-size:cover;background-position:center;}
+.pp-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-pp1900.jpg); background-size:cover;background-position:center;}
+.pp-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-pp1900.jpg); background-size:cover;background-position:center;}
+.pp-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/4-pp1920.jpg); background-size:cover;background-position:center;}
+.pp-banner4{background-image:url(http://www.e-forklift.cn/app/template/default/images/5-pp1900.jpg); background-size:cover;background-position:center;}
+/*
+@media screen and (min-width: 1400px) and (max-width: 1450px) {
+.hhr-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-hhr1430.jpg); background-size:100% 100%;}
+.hhr-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-hhr1430.jpg); background-size:100% 100%;}
+.eg-banner1{ background-image:url(http://www.e-forklift.cn/app/template/default/images/1-eg1430.jpg); background-size:100% 100%;}  
+.eg-banner2{ background-image:url(http://www.e-forklift.cn/app/template/default/images/2-eg1430.jpg); background-size:100% 100%;} 
+.lxwm-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-lx1430.jpg); background-size:100% 100%;}
+.lxwm-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-lx1430.jpg); background-size:100% 100%;}
+.lxwm-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-lx1430.jpg); background-size:100% 100%;}
+.pp-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-pp1430.jpg); background-size:100% 100%;}
+.pp-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-pp1430.jpg); background-size:100% 100%;}
+.pp-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/4-pp1430.jpg); background-size:100% 100%;}
+.pp-banner4{background-image:url(http://www.e-forklift.cn/app/template/default/images/5-pp1430.jpg); background-size:100% 100%;}
+} 
+@media screen and (min-width: 1590px) and (max-width: 1610px) {
+	.hhr-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-hhr1600.jpg); background-size:100% 100%;}
+.hhr-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-hhr1600.jpg); background-size:100% 100%;}
+.eg-banner1{ background-image:url(http://www.e-forklift.cn/app/template/default/images/1-eg1600.jpg); background-size:100% 100%;}  
+.eg-banner2{ background-image:url(http://www.e-forklift.cn/app/template/default/images/2-eg1600.jpg); background-size:100% 100%;} 
+.lxwm-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-lx1600.jpg); background-size:100% 100%;}
+.lxwm-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-lx1600.jpg); background-size:100% 100%;}
+.lxwm-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-lx1600.jpg); background-size:100% 100%;}
+.pp-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-pp1600.jpg); background-size:100% 100%;}
+.pp-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-pp1600.jpg); background-size:100% 100%;}
+.pp-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/4-pp1600.jpg); background-size:100% 100%;}
+.pp-banner4{background-image:url(http://www.e-forklift.cn/app/template/default/images/5-pp1600.jpg); background-size:100% 100%;}
+} 
+@media screen and (min-width: 1700px) and (max-width: 2000px) {
+	.hhr-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-hhr1900.jpg); background-size:100% 100%;}
+.hhr-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-hhr1900.jpg); background-size:100% 100%;}
+.eg-banner1{ background-image:url(http://www.e-forklift.cn/app/template/default/images/1-eg1900.jpg); background-size:100% 100%;}  
+.eg-banner2{ background-image:url(http://www.e-forklift.cn/app/template/default/images/2-eg1900.jpg); background-size:100% 100%;} 
+.lxwm-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-lx1900.jpg); background-size:100% 100%;}
+.lxwm-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-lx1900.jpg); background-size:100% 100%;}
+.lxwm-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-lx1900.jpg); background-size:100% 100%;}
+.pp-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-pp1900.jpg); background-size:100% 100%;}
+.pp-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-pp1900.jpg); background-size:100% 100%;}
+.pp-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/4-pp1900.jpg); background-size:100% 100%;}
+.pp-banner4{background-image:url(http://www.e-forklift.cn/app/template/default/images/5-pp1900.jpg); background-size:100% 100%;}
+} 
+
+@media screen and (max-width: 1390px) { 
+.hhr-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-hhr1360.jpg); background-size:100% 100%;}
+.hhr-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-hhr1360.jpg); background-size:100% 100%;}
+.eg-banner1{ background-image:url(http://www.e-forklift.cn/app/template/default/images/1-eg1360.jpg); background-size:100% 100%;} 
+.eg-banner2{ background-image:url(http://www.e-forklift.cn/app/template/default/images/2-eg1360.jpg); background-size:100% 100%;} 
+.lxwm-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-lx1360.jpg); background-size:100% 100%;}
+.lxwm-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/2-lx1360.jpg); background-size:100% 100%;}
+.lxwm-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-lx1360.jpg); background-size:100% 100%;}
+.pp-banner1{background-image:url(http://www.e-forklift.cn/app/template/default/images/1-pp1360.jpg); background-size:100% 100%;}
+.pp-banner2{background-image:url(http://www.e-forklift.cn/app/template/default/images/3-pp1360.jpg); background-size:100% 100%;}
+.pp-banner3{background-image:url(http://www.e-forklift.cn/app/template/default/images/4-pp1360.jpg); background-size:100% 100%;}
+.pp-banner4{background-image:url(http://www.e-forklift.cn/app/template/default/images/5-pp1360.jpg); background-size:100% 100%;}
+}
+*/

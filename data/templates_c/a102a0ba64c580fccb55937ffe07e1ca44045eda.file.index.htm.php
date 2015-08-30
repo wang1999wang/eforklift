@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-04 06:38:56
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-24 12:58:48
          compiled from "E:\WWW\eforklift\app\template\default\index\index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:3017155bfed80198522-29587312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a102a0ba64c580fccb55937ffe07e1ca44045eda' => 
     array (
       0 => 'E:\\WWW\\eforklift\\app\\template\\default\\index\\index.htm',
-      1 => 1438399380,
+      1 => 1440377810,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55bfed80b6fff5_36858560',
   'variables' => 
   array (
     'style' => 0,
@@ -25,14 +27,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'chache_class_list' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55bfed80b6fff5_36858560',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55bfed80b6fff5_36858560')) {function content_55bfed80b6fff5_36858560($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'E:\\WWW\\eforklift\\app\\include\\libs\\plugins\\function.url.php';
 if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\app\\include\\libs\\plugins\\function.formatpicurl.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplstyle']->value)."/header.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
  
-
 <!--[if lte IE 8]>
     <link href="css/iefixed.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -45,9 +44,9 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
 /js/high.js"><?php echo '</script'; ?>
 >
 <link href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
-/css/home.css" rel="stylesheet" type="text/css" />
+/css/home.css" rel="stylesheet" type="text/css">
 <link href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
-/css/highlight.css" rel="stylesheet" type="text/css" />
+/css/highlight.css" rel="stylesheet" type="text/css">
 
 <?php $_smarty_tpl->tpl_vars['curr'] = new Smarty_variable(0, null, 0);?>
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplstyle']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -60,11 +59,11 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
 	<a href="#" >
 		<div class="high-box">
 			<div class="figure">
-                <img class="fg" src="http://www.e-forklift.cn/app/template/default/images/1.png" alt="x5pro" width="700" height="560" />
+                <img class="fg" src="http://www.e-forklift.cn/app/template/default/images/1.png" alt="x5pro" width="700" height="560">
             </div>
 			<div class="high-title">
 				<h2></h2>
-				<h3><img src="http://www.e-forklift.cn/app/template/default/images/111.png" alt="x5maxact" width="366" height="167" /></h3>
+				<h3><img src="http://www.e-forklift.cn/app/template/default/images/111.png" alt="x5maxact" width="366" height="167"></h3>
 			</div>
 		</div>
 	</a>
@@ -74,11 +73,11 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
 	<a href="#" >
 		<div class="high-box">
 			<div class="figure">
-                <img src="http://www.e-forklift.cn/app/template/default/images/2.png" alt="x5maxpt" width="700" height="560" />
+                <img src="http://www.e-forklift.cn/app/template/default/images/2.png" alt="x5maxpt" width="700" height="560">
             </div>
 			<div class="high-title">
-				<h2><img src="http://www.e-forklift.cn/app/template/default/images/22.png" alt="x5maxact" width="350" height="70" /></h2>
-				<h3><img src="http://www.e-forklift.cn/app/template/default/images/222.png" alt="x5maxpt" width="580" height="70" /></h3>
+				<h2><img src="http://www.e-forklift.cn/app/template/default/images/22.png" alt="x5maxact" width="350" height="70"></h2>
+				<h3><img src="http://www.e-forklift.cn/app/template/default/images/222.png" alt="x5maxpt" width="580" height="70"></h3>
 			</div>
 		</div>
 	</a>
@@ -87,10 +86,10 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
 				 <li class="high-x3v"> 
         <a href="#">
           <div class="high-box">
-            <div class="figure"><img src="http://www.e-forklift.cn/app/template/default/images/3.png" width="700" height="560" /></div>
+            <div class="figure"><img src="http://www.e-forklift.cn/app/template/default/images/3.png" width="700" height="560"></div>
             <div class="high-title">
-              <h2><img src="http://www.e-forklift.cn/app/template/default/images/33.png" width="570" height="120"/></h2>
-              <h3><img src="http://www.e-forklift.cn/app/template/default/images/333.png" width="450" height="70" /></h3>
+              <h2><img src="http://www.e-forklift.cn/app/template/default/images/33.png" width="570" height="120"></h2>
+              <h3><img src="http://www.e-forklift.cn/app/template/default/images/333.png" width="450" height="70"></h3>
             </div>
           </div>
           </a>
@@ -100,11 +99,11 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
 	<a href="#" >
 		<div class="high-box">
 			<div class="light"></div>
-			<div class="figure"><img src="http://www.e-forklift.cn/app/template/default/images/4.png" width="700" height="560" /></div>
+			<div class="figure"><img src="http://www.e-forklift.cn/app/template/default/images/4.png" width="700" height="560"></div>
 			<div class="high-title">
-				<h2><img src="http://www.e-forklift.cn/app/template/default/images/44.png" alt="x5maxact" width="350" height="70" /></h2>
+				<h2><img src="http://www.e-forklift.cn/app/template/default/images/44.png" alt="x5maxact" width="350" height="70"></h2>
 				<h3></h3>
-				<h4><img src="http://www.e-forklift.cn/app/template/default/images/4444.png" alt="x5max+" width="380" height="70" /></h4>
+				<h4><img src="http://www.e-forklift.cn/app/template/default/images/4444.png" alt="x5max+" width="380" height="70"></h4>
 			</div>
 		</div>
 	</a>
@@ -113,10 +112,10 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
 <li class="high-xshotnew"> 
         <a href="#">
           <div class="high-box"> 
-          		<em class="mask"><img src="http://www.e-forklift.cn/app/template/default/images/h-xshot-mask.png" width="700" height="560"/></em>
+          		<em class="mask"><img src="http://www.e-forklift.cn/app/template/default/images/h-xshot-mask.png" width="700" height="560"></em>
            		<div class="high-title">
-              	<h2><img src="http://www.e-forklift.cn/app/template/default/images/55.png"width="450" height="70"/></h2>
-                <h3><img src="http://www.e-forklift.cn/app/template/default/images/555.png" width="350" height="70" /></h3>
+              	<h2><img src="http://www.e-forklift.cn/app/template/default/images/55.png"width="450" height="70"></h2>
+                <h3><img src="http://www.e-forklift.cn/app/template/default/images/555.png" width="350" height="70"></h3>
             	</div>
           </div>
           </a> 
@@ -127,30 +126,31 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
 		<div class="high-box">
 			<div class="figure">
 
-				<b class="mob4"><img src="http://www.e-forklift.cn/app/template/default/images/h-x5-f4.png" alt="X5" width="710" height="680" /></b>
+				<b class="mob4"><img src="http://www.e-forklift.cn/app/template/default/images/h-x5-f4.png" alt="X5" width="710" height="680"></b>
 			</div>
 			<div class="high-title">
-				<h2><img src="http://www.e-forklift.cn/app/template/default/images/66.png" width="570" height="120" /></h2>
-				<h3><img src="http://www.e-forklift.cn/app/template/default/images/666.png" width="470" height="70" /></h3>
-				<h4><img src="http://www.e-forklift.cn/app/template/default/images/h-x5-t3.png" width="366" height="127" /></h4>
+				<h2><img src="http://www.e-forklift.cn/app/template/default/images/66.png" width="570" height="120"></h2>
+				<h3><img src="http://www.e-forklift.cn/app/template/default/images/666.png" width="470" height="70"></h3>
+				<h4><img src="http://www.e-forklift.cn/app/template/default/images/h-x5-t3.png" width="366" height="127"></h4>
 			</div>
 		</div>
 	</a>
 </li>
 
 
+
 <li class="high-y29">
 	<a href="#" >
 		<div class="high-box">
             <div class="move">
-                <em class="mo1"><img src="http://www.e-forklift.cn/app/template/default/images/h-y29-move1.png" alt="y29" width="1990" height="1992" /></em>
-                <em class="mo2"><img src="http://www.e-forklift.cn/app/template/default/images/h-y29-move2.png" alt="y29" width="1990" height="1992" /></em>
-                <em class="mo3"><img src="http://www.e-forklift.cn/app/template/default/images/h-y29-move3.png" alt="y29" width="1990" height="1992" /></em>
+                <em class="mo1"><img src="http://www.e-forklift.cn/app/template/default/images/h-y29-move1.png" alt="y29" width="1990" height="1992"></em>
+                <em class="mo2"><img src="http://www.e-forklift.cn/app/template/default/images/h-y29-move2.png" alt="y29" width="1990" height="1992"></em>
+                <em class="mo3"><img src="http://www.e-forklift.cn/app/template/default/images/h-y29-move3.png" alt="y29" width="1990" height="1992"></em>
             </div>
-			<div class="figure"><img src="http://www.e-forklift.cn/app/template/default/images/h-y29-figure.png" alt="y29" width="365" height="590" /></div>
+			<div class="figure"><img src="http://www.e-forklift.cn/app/template/default/images/h-y29-figure.png" alt="y29" width="365" height="590"></div>
 			<div class="high-title">
-				<h2><img src="http://www.e-forklift.cn/app/template/default/images/77.png" alt="y29" width="570" height="70" /></h2>
-				<h3><img src="http://www.e-forklift.cn/app/template/default/images/777.png" alt="y29" width="470" height="70" /></h3>
+				<h2><img src="http://www.e-forklift.cn/app/template/default/images/77.png" alt="y29" width="570" height="70"></h2>
+				<h3><img src="http://www.e-forklift.cn/app/template/default/images/777.png" alt="y29" width="470" height="70"></h3>
 			</div>
 		</div>
 	</a>
@@ -165,13 +165,13 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
                     <ul>
                         <li class="pic"><a href="<?php echo $_smarty_tpl->tpl_vars['adlist']->value[32]['url'];?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['adlist']->value[32]['pic'];?>
-" alt="画出最美的曲线" /><i><b></b><h3>打开微信扫一扫</h3><p>打开微信扫一扫</p></i></a></li>
+" alt="画出最美的曲线"><i><b></b><h3>打开微信扫一扫</h3><p>打开微信扫一扫</p></i></a></li>
                         <li class="video">
                         <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase=",0,19,0" width="367" height="240">
-<param name="movie" value="http://player.youku.com/player.php/sid/XODgwMDg5MTQ4/v.swf" />
-<param name="quality" value="high" />
-<param name="wmode" value="transparent" />
-<embed src="http://player.youku.com/player.php/sid/XODgwMDg5MTQ4/v.swf" quality="high" pluginspage="; type="application/x-shockwave-flash" width="367" height="240"/></embed>
+<param name="movie" value="http://player.youku.com/player.php/sid/XODgwMDg5MTQ4/v.swf">
+<param name="quality" value="high">
+<param name="wmode" value="transparent">
+<embed src="http://player.youku.com/player.php/sid/XODgwMDg5MTQ4/v.swf" quality="high" pluginspage=""; type="application/x-shockwave-flash" width="367" height="240"/></embed>
 </object>
                         <!--<embed src="http://player.youku.com/player.php/sid/XMTI4MzI5OTEwMA==/v.swf" allowfullscreen="true" quality="high" width="368" height="240" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
                             <embed src="http://player.youku.com/player.php/sid/XODgwMDg5MTQ4/v.swf" allowfullscreen="true" quality="high" width="368" height="240" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>-->
@@ -179,7 +179,7 @@ if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\eforklift\\a
                         <li class="pictext"><a href="<?php echo smarty_function_url(array('m'=>'cars'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['adlist']->value[34]['pic'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['adlist']->value[34]['ad_name'];?>
-" /><i><b></b><h3>产品 挑选器</h3><p>找到适合您工况的车型</p></i></a></li>
+"><i><b></b><h3>产品 挑选器</h3><p>找到适合您工况的车型</p></i></a></li>
                     </ul>
                 </div>
                 <style>
@@ -203,7 +203,7 @@ $_smarty_tpl->tpl_vars['two']->_loop = true;
                                 <a href="<?php echo smarty_function_url(array('m'=>'article','c'=>'show','id'=>$_smarty_tpl->tpl_vars['two']->value['id']),$_smarty_tpl);?>
 " class="high-a"><img src="<?php echo smarty_function_formatpicurl(array('path'=>$_smarty_tpl->tpl_vars['two']->value['newsphoto']),$_smarty_tpl);?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['two']->value['title'];?>
-" /></a>
+"></a>
                                 <?php } ?>
                                 <?php } ?>
                             </div>
@@ -253,8 +253,8 @@ $_smarty_tpl->tpl_vars['two']->_loop = true;
                                             <dd class="first cl">
                                                 <a href="<?php echo smarty_function_url(array('m'=>'school','c'=>'show','id'=>$_smarty_tpl->tpl_vars['two']->value['id']),$_smarty_tpl);?>
 " class="event-pic"><img src="<?php echo smarty_function_formatpicurl(array('path'=>$_smarty_tpl->tpl_vars['two']->value['newsphoto']),$_smarty_tpl);?>
-" /></a>
-                                                <h3><a href="<?php echo smarty_function_url(array('m'=>'school','c'=>'show','id'=>$_smarty_tpl->tpl_vars['two']->value['id']),$_smarty_tpl);?>
+"></a>
+                                              <h3><a href="<?php echo smarty_function_url(array('m'=>'school','c'=>'show','id'=>$_smarty_tpl->tpl_vars['two']->value['id']),$_smarty_tpl);?>
 "><?php echo $_smarty_tpl->tpl_vars['two']->value['title'];?>
 </a></h3>
                                                 <p><?php echo $_smarty_tpl->tpl_vars['two']->value['content'];?>

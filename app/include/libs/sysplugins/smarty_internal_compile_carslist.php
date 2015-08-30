@@ -1,7 +1,7 @@
 <?php
 class Smarty_Internal_Compile_Carslist extends Smarty_Internal_CompileBase{
     public $required_attributes = array('item');
-    public $optional_attributes = array('name', 'key', 't_len', 'limit', 'rec', 'limit', 'pic', 'd_len', 'type', 'urlstatic','print','order','sort','ispage','nid','islt','cache','pinpai','leixing','fuzai','dongliyuan','gongzuochangdi','tishenggaodu');
+    public $optional_attributes = array('name', 'key', 't_len', 'limit', 'rec', 'limit', 'pic', 'd_len', 'type', 'urlstatic','print','order','sort','ispage','nid','islt','cache','pinpai','leixing','fuzai','dongliyuan','gongzuochangdi','tishenggaodu','tishenggaodu_min','fuzai_min');
     public $shorttag_order = array('from', 'item', 'key', 'name');
     public function compile($args, $compiler, $parameter){
         $_attr = $this->getAttributes($compiler, $args);
@@ -79,6 +79,9 @@ class Smarty_Internal_Compile_Carslist extends Smarty_Internal_CompileBase{
             if($paramer[\'fuzai\']!=""){
 				$where .=" AND `fuzai`<=\'".$paramer[\'fuzai\']."\'";
 			}
+            if($paramer[\'fuzai_min\']!=""){
+				$where .=" AND `fuzai`>=\'".$paramer[\'fuzai_min\']."\'";
+			}
             if($paramer[\'dongliyuan\']!=""){
 				$where .=" AND `dongliyuan`=\'".$paramer[\'dongliyuan\']."\'";
 			}
@@ -87,6 +90,9 @@ class Smarty_Internal_Compile_Carslist extends Smarty_Internal_CompileBase{
 			}
             if($paramer[\'tishenggaodu\']!=""){
 				$where .=" AND `tishenggaodu`<=\'".$paramer[\'tishenggaodu\']."\'";
+			}
+            if($paramer[\'tishenggaodu_min\']!=""){
+				$where .=" AND `tishenggaodu`>=\'".$paramer[\'tishenggaodu_min\']."\'";
 			}
 			if($paramer[\'order\']!=""){
 				$order = str_replace("\'","",$paramer[\'order\']);
