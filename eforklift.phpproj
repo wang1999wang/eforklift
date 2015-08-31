@@ -18,6 +18,10 @@
   <ItemGroup>
     <Compile Include="admin.php" />
     <Compile Include="admin\model\leaveword.class.php" />
+    <Compile Include="app\controller\search\index.class.php" />
+    <Compile Include="app\controller\search\list.class.php" />
+    <Compile Include="app\controller\search\show.class.php" />
+    <Compile Include="search\index.php" />
     <Compile Include="global.php" />
     <Compile Include="haha.php" />
     <Compile Include="index.php" />
@@ -501,6 +505,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".htaccess" />
+    <Content Include="app\template\default\search\index.htm" />
     <Content Include="eforklift.phpproj" />
     <Content Include="eforklift.phpproj.user" />
     <Content Include="eforklift.sln" />
@@ -3729,6 +3734,7 @@
     <Folder Include="app" />
     <Folder Include="app\controller" />
     <Folder Include="app\controller\about" />
+    <Folder Include="app\controller\search\" />
     <Folder Include="app\controller\aboutcom" />
     <Folder Include="app\controller\ajax" />
     <Folder Include="app\controller\announcement" />
@@ -3798,6 +3804,7 @@
     <Folder Include="app\template\default\job" />
     <Folder Include="app\template\default\js" />
     <Folder Include="app\template\default\link" />
+    <Folder Include="app\template\default\search\" />
     <Folder Include="app\template\default\picture" />
     <Folder Include="app\template\default\public_search" />
     <Folder Include="app\template\default\school" />
@@ -3806,6 +3813,7 @@
     <Folder Include="app\template\default\vivo" />
     <Folder Include="app\template\default\yigou" />
     <Folder Include="article" />
+    <Folder Include="search\" />
     <Folder Include="cars" />
     <Folder Include="config" />
     <Folder Include="config\ajax_img" />

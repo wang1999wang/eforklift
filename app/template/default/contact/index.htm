@@ -1,114 +1,17 @@
-{yun:}include file="$tplstyle/header.htm"{/yun}	
-{yun:}assign var=curr value=6{/yun}
+{yun:}assign var=title value="联系我们_E叉租赁网-一站式叉车租赁综合交易平台"{/yun}
+{yun:}assign var=description value="E叉租赁网提供在线留言,在线交流,QQ，电话等租叉联系方式，让您快速找到我们!"{/yun}
+
+{yun:}include file="$tplstyle/header.htm"{/yun}
+
 <link href="{yun:}$style{/yun}/css/tianjia.css" rel="stylesheet" type="text/css" />
  <script type="text/javascript" src="{yun:}$style{/yun}/js/jquery.js"></script>
 <script src="{yun:}$style{/yun}/js/jquery-1.10.2.min.js" ></script>
 <script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
 <script src="{yun:}$config.sy_weburl{/yun}/js/public.js" language="javascript"></script> 
 <script type="text/javascript" src="{yun:}$style{/yun}/js/common.js"></script>
-</head>
-<script>
-    /*
-联系我们 ""
-标题：联系我们_E叉租赁网-一站式叉车租赁综合交易平台
-描述：E叉租赁网提供在线留言,在线交流,QQ，电话等租叉联系方式，让您快速找到我们!
 
-二维码 au1
-标题：二维码_联系我们_E叉租赁网-一站式叉车租赁综合交易平台
-
-咨询服务 au3
-标题：咨询服务_联系我们_E叉租赁网-一站式叉车租赁综合交易平台
-
-联系方式 au4
-标题：联系方式_联系我们_E叉租赁网-一站式叉车租赁综合交易平台
-
-在线留言 au5
-标题：在线留言_联系我们_E叉租赁网-一站式叉车租赁综合交易平台
-    */
-    function set_title(title, description, keywords) {
-        var metaEl = document.getElementsByTagName("meta");
-        //metaEl[0].name = "123123"; metaEl[0].content = "asdfasdf";
-        //alert(metaEl[0].name+metaEl[0].content);
-        //设置标题
-        document.title = title;
-        for (var i = 0; i < metaEl.length; i++) {
-            if (metaEl[i].name = "description") {
-                //设置描述
-                metaEl[i].content = description;
-            } else if (metaEl[i].name = "keywords") {
-                //设置关键字
-                metaEl[i].content = keywords;
-            }
-        }
-    }
-    function set_title_meta() {
-        //获取当前浏览器中地址，截取出page部分
-        var cur_url_list = this.location.href.split("#");
-        var cur_page = cur_url_list[cur_url_list.length - 1];
-        var title = "", description = "", keywords = "";
-        //根据不同的page设置不同的title、keywords、description
-        if (cur_page == "au1") {
-            title = "二维码_联系我们_E叉租赁网-一站式叉车租赁综合交易平台";
-            set_title(title, description, keywords);
-        } else if (cur_page == "au3") {
-            title = "咨询服务_联系我们_E叉租赁网-一站式叉车租赁综合交易平台";
-            set_title(title, description, keywords);
-        } else if (cur_page == "au4") {
-            title = "联系方式_联系我们_E叉租赁网-一站式叉车租赁综合交易平台";
-            set_title(title, description, keywords);
-        } else if (cur_page == "au5") {
-            title = "在线留言_联系我们_E叉租赁网-一站式叉车租赁综合交易平台";
-            set_title(title, description, keywords);
-        } else {
-            title = "联系我们_E叉租赁网-一站式叉车租赁综合交易平台";
-            set_title(title, description, keywords);
-        }
-    }
-    $(function () {
-        setInterval(set_title_meta, 500);
-    });
-</script>
-<body>
-<div class="header">
-        <div class="header_in">
-            <div id="vivo-airbox"></div>
-            <div id="vivo-wrap">
-                <div id="vivo-head">
-                    <div class="vivo-search">
-                        <div class="search-box">
-                            <form action='/search' method='get' onSubmit="if ($.trim($(this).find('input').val()) == '') {alert('请输入关键词'); return false;} return true;"><input type="text" placeholder="如:E叉车租赁" name='q' class='data_q' autocomplete="off" /><button>搜索</button><a class="close"></a></form>
-                            <div class="qk-results">
-                                <ul></ul>
-                                <div class="other-results"><a href="#">其他搜索结果</a></div>
-                            </div>
-                        </div>
-                    </div><div class="wd">
-                              <div class="vivo-nav cl" style="height:0px;">
-                                  <a href="{yun:}$config.sy_weburl{/yun}" class="vivo-logo" title="vivo" style="background-image:none;"><img src="{yun:}$style{/yun}/picture/logo.png" alt="E叉车租赁" /></a>
-                                  <div id="menu">
-                                      <ul>
-                                          {yun:}foreach from=$nav_list1 item=one key=key{/yun}
-                                          <li data-ref="{yun:}$one.id{/yun}" class="{yun:}if $curr==$key{/yun}curr{yun:}/if{/yun}">
-                                              <a href="{yun:}$config.sy_weburl{/yun}/{yun:}$one.url{/yun}">{yun:}$one.name{/yun}</a>
-                                              <ul class="sub_menu">
-                                                  {yun:}foreach from=$one.sonlist item=two{/yun}
-                                                  <li><a href="{yun:}$config.sy_weburl{/yun}/{yun:}$two.url{/yun}">{yun:}$two.name{/yun}</a></li>
-                                                  {yun:}/foreach{/yun}
-                                              </ul>
-                                          </li>
-                                          {yun:}/foreach{/yun}
-                                      </ul>
-                                  </div>
-                                  <div class="search-user"><a href="#" class="search"><b></b></a></div>
-                              </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
+{yun:}assign var=curr value=6{/yun}
+{yun:}include file="$tplstyle/top.htm"{/yun}
 
 <div class="fixed_r">
 	<ul>
@@ -120,10 +23,10 @@
 	</ul>
 </div>
 <div class="num_box">
-	<div class="num lxwm-banner1" id="num_0 au1" ></div>
-	<div class="num lxwm-banner2" id="num_1 au2" ><a href="http://wpa.qq.com/msgrd?v=3&uin=503608913&site=qq&menu=yes&from=message&isappinstalled=0" target="_black"><div class="msg_qq"></div></a></div>
-	<div class="num lxwm-banner3" id="num_2 au3" ></div>
-	<div class="num" id="num_3 au4"> 
+	<div class="num lxwm-banner1" id="num_0 au1" name="au1" ></div>
+	<div class="num lxwm-banner2" id="num_1 au2" name="au2" ><a href="http://wpa.qq.com/msgrd?v=3&uin=503608913&site=qq&menu=yes&from=message&isappinstalled=0" target="_black"><div class="msg_qq"></div></a></div>
+	<div class="num lxwm-banner3" id="num_2 au3" name="au4" ></div>
+	<div class="num" id="num_3 au4" name="au4"> 
 	<div style="height:80px; width:100%;"> </div>
         <div class="area-sixth tianjia-one">
         	<div class="tianjia-two">
@@ -184,7 +87,7 @@
         </div>
 	</div>
     
-	<div class="footerall num" id="num_4 au5">
+	<div class="footerall num" id="num_4 au5" name="au5">
     <div class="footer">
         <div class="footer_allone">
             <p class="footer-nav">

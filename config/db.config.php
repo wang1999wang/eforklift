@@ -1,11 +1,11 @@
 <?php 
   $db_config = array(
       'dbtype'=>'mysql',
-      'dbhost'=>'211.149.239.16',
-      'dbuser'=>'echatest',
-      'dbpass'=>'echatest01',
-      'dbname'=>'echatest',
-      'def'=>'phpyun_',
+      'dbhost'=>'qdm169815666.my3w.com',
+      'dbuser'=>'qdm169815666',
+      'dbpass'=>'yy20151004',
+      'dbname'=>'qdm169815666_db',
+      'def'=>'eforklift_',
       'charset'=>'GBK',
       'timezone'=>'PRC',
       'coding'=>'5607343f66f33ccec9c7f0bf33a388fa', //Éú³Écookie¼ÓÃÜ

@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title></title>
+{yun:}assign var=title value="E叉品牌_E叉租赁网-一站式叉车租赁综合交易平台"{/yun}
+{yun:}assign var=description value="E叉租赁网提供7大类型进口叉车品牌排行榜，让您快速找到合适的叉车品牌!E叉租赁网提供优质的叉车租赁服务，对客户一贯承诺保障合同的履约，通过租买对比让您清晰的了解租车的优势，叉车虽冰冷，售后关怀是温情的，E叉动态带您了解公司新动态，我们致力于打造专业的叉车租赁品牌。"{/yun}
+
+{yun:}include file="$tplstyle/header.htm"{/yun}
+
 <link href="{yun:}$style{/yun}/css/tianjia.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{yun:}$style{/yun}/js/jquery.js"></script>
 <script src="{yun:}$style{/yun}/js/jquery-1.10.2.min.js" ></script>
@@ -10,71 +10,7 @@
 <script src="{yun:}$style{/yun}/js/jquery.fullpage.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="{yun:}$style{/yun}/js/common.js"></script>
 <script>
-    /*
-E叉品牌 page1
-标题：E叉品牌_E叉租赁网-一站式叉车租赁综合交易平台
-描述：E叉租赁网提供7大类型进口叉车品牌排行榜，让您快速找到合适的叉车品牌!
-E叉租赁网提供优质的叉车租赁服务，对客户一贯承诺保障合同的履约，通过租买对比让您清晰的了解租车的优势，叉车虽冰冷，售后关怀是温情的，E叉动态带您了解公司新动态，我们致力于打造专业的叉车租赁品牌。
-
-E叉服务 page2
-标题：E叉服务_E叉租赁网-一站式叉车租赁综合交易平台
-描述：E叉租赁网提供专业叉车售后技术指导，提供叉车维修一站式服务。
-
-一贯承诺 page3
-标题：一贯承诺_E叉租赁网-一站式叉车租赁综合交易平台
-描述：E叉租赁网提供权威的叉车租赁合同，我们承诺租最好的车，让您放心租满意租!
-
-租买对比 page4
-标题：租买对比_E叉租赁网-一站式叉车租赁综合交易平台
-描述：E叉租赁网为您提供真实的叉车租买对比案例，让您一目了然的了解叉车租赁的优势。
-
-售后关怀 page5
-标题：售后关怀_E叉租赁网-一站式叉车租赁综合交易平台
-描述：E叉租赁网提供温情的售后服务，让您租赁叉车满意和放心!
-    */
-    function set_title(title, description, keywords) {
-        var metaEl = document.getElementsByTagName("meta");
-        //metaEl[0].name = "123123"; metaEl[0].content = "asdfasdf";
-        //alert(metaEl[0].name+metaEl[0].content);
-        document.title = title;
-        for (var i = 0; i < metaEl.length; i++) {
-            if (metaEl[i].name = "description") {
-                //设置描述
-                metaEl[i].content = description;
-            } else if (metaEl[i].name = "keywords") {
-                //设置关键字
-                metaEl[i].content = keywords;
-            }
-        }
-    }
     $(function () {
-        //获取当前浏览器中地址，截取出page部分
-        var cur_url_list = this.location.href.split("#");
-        var cur_page = cur_url_list[cur_url_list.length - 1];
-        var title = "", description = "", keywords = "";
-        //根据不同的page设置不同的title、keywords、description
-        if (cur_page == "page1") {
-            //设置标题
-            title = "E叉品牌_E叉租赁网-一站式叉车租赁综合交易平台";
-            description = "E叉租赁网提供7大类型进口叉车品牌排行榜，让您快速找到合适的叉车品牌!            E叉租赁网提供优质的叉车租赁服务，对客户一贯承诺保障合同的履约，通过租买对比让您清晰的了解租车的优势，叉车虽冰冷，售后关怀是温情的，E叉动态带您了解公司新动态，我们致力于打造专业的叉车租赁品牌。";
-            set_title(title, description, keywords);
-        } else if (cur_page == "page2") {
-            title = "E叉服务_E叉租赁网-一站式叉车租赁综合交易平台";
-            description = "E叉租赁网提供专业叉车售后技术指导，提供叉车维修一站式服务。";
-            set_title(title, description, keywords);
-        } else if (cur_page == "page3") {
-            title = "一贯承诺_E叉租赁网-一站式叉车租赁综合交易平台";
-            description = "E叉租赁网为您提供真实的叉车租买对比案例，让您一目了然的了解叉车租赁的优势。";
-            set_title(title, description, keywords);
-        } else if (cur_page == "page4") {
-            title = "租买对比_E叉租赁网-一站式叉车租赁综合交易平台";
-            description = "";
-            set_title(title, description, keywords);
-        } else if (cur_page == "page5") {
-            title = "售后关怀_E叉租赁网-一站式叉车租赁综合交易平台";
-            description = "E叉租赁网提供温情的售后服务，让您租赁叉车满意和放心!";
-            set_title(title, description, keywords);
-        }
         $(function () {
         $.fn.fullpage({
             slidesColor: ['#83D1E7', '#EBEBEB', '#F2F2F2', '#EAEAEA', '#EAEAEA'],
@@ -128,88 +64,9 @@ E叉服务 page2
 	 });
 	  });
 </script>
-</head>
-<body>
-<div class="header">
-        <div class="header_in">
-            <div id="vivo-airbox"></div>
-            <div id="vivo-wrap">
-                <div id="vivo-head">
-                    <div class="vivo-search">
-                        <div class="search-box">
-                            <form action='/search' method='get' onSubmit="if ($.trim($(this).find('input').val()) == '') {alert('请输入关键词'); return false;} return true;"><input type="text" placeholder="如:E叉车租赁" name='q' class='data_q' autocomplete="off" /><button>搜索</button><a class="close"></a></form>
-                            <div class="qk-results">
-                                <ul></ul>
-                                <div class="other-results"><a href="#">其他搜索结果</a></div>
-                            </div>
-                        </div>
-                    </div><div class="wd">
-                    <div class="vivo-nav cl" style="height:0px;">
-                        <a href="http://www.e-forklift.cn" class="vivo-logo" title="vivo" style="background-image:none;"><img src="http://www.e-forklift.cn/app/template/default/picture/logo.png" alt="E叉车租赁" /></a>
-                        <div id="menu">
-                            <ul>
-                                                                <li data-ref="1" >
-                                    <a href="http://www.e-forklift.cn/index.php">首页</a>
-                                    <ul class="sub_menu">
-                                                                            </ul>
-                                </li>
-                                                                <li data-ref="2" class="curr">
-                                    <a href="http://www.e-forklift.cn/index.php?m=about#page1">E叉品牌</a>
-                                    <ul class="sub_menu">
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=aboutcom#page1">品牌故事</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=about#page2">E叉服务</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=about#page3">一贯承诺</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=about#page4">租买对比</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=about#page5">售后关怀</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/article/">E叉动态</a></li>
-                                                                            </ul>
-                                </li>
-                                                                <li data-ref="3" class="">
-                                    <a href="http://www.e-forklift.cn/cars/">叉车家族</a>
-                                    <ul class="sub_menu">
-                                                                                <li><a href="http://www.e-forklift.cn/cars/?nid=1">热门车型</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/cars/?nid=2">促销车型</a></li>
-                                                                            </ul>
-                                </li>
-                                                                <li data-ref="4" class="">
-                                    <a href="http://www.e-forklift.cn/index.php?m=school">E叉学堂</a>
-                                    <ul class="sub_menu">
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=school&nid=3">叉车安全驾驶</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=school&nid=1">叉车小故障</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=school&nid=2">叉车保养</a></li>
-                                                                            </ul>
-                                </li>
-                                                                <li data-ref="71" >
-                                    <a href="http://www.e-forklift.cn/index.php?m=yigou">E叉易购</a>
-                                    <ul class="sub_menu">
-                                                                            </ul>
-                                </li>
-                                                                <li data-ref="72" >
-                                    <a href="http://www.e-forklift.cn/index.php?m=hehuoren">E叉合伙人</a>
-                                    <ul class="sub_menu">
-                                                                            </ul>
-                                </li>
-                                                                <li data-ref="15">
-                                    <a href="http://www.e-forklift.cn/index.php?m=contact">联系我们</a>
-                                    <ul class="sub_menu">
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=contact#au1">二维码</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=contact#au3">咨询服务</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=contact#au4">联系方式</a></li>
-                                                                                <li><a href="http://www.e-forklift.cn/index.php?m=contact#au5">在线留言</a></li>
-                                                                            </ul>
-                                </li>
-                                                            </ul>
-                        </div>
-                        <div class="search-user"><a href="#" class="search"><b></b></a></div>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-
-
+{yun:}assign var=curr value=1{/yun}
+{yun:}include file="$tplstyle/top.htm"{/yun}
 
 <div class="fixed_r">
 	<ul>
@@ -222,8 +79,8 @@ E叉服务 page2
 	</ul>
 </div>
 <div class="num_box">
-	<div class="num pp-banner1" id="num_0 page1"></div>  
-    <div class="num" id="num_1 page2" style=" background-color:#f2f3f2">
+	<div class="num pp-banner1" id="num_0 page1" name="page1"></div>  
+    <div class="num" id="num_1 page2" style=" background-color:#f2f3f2" name="page2">
     <div style="width:100%;position: relative;" >
             <img id="brand_pro" style="margin-left: -630px;" src="{yun:}$adlist[18].pic{/yun}" />
             <img id="brand_pro_txt" style="position: absolute;left:500px;top:105px;" src="{yun:}$adlist[8].pic{/yun}" />
@@ -237,10 +94,10 @@ E叉服务 page2
         </div>
         
      </div>
-    <div class="num  pp-banner2" id="num_2 page3"> </div>
-    <div class="num  pp-banner3" id="num_3 page4"> </div>        
-   <div class="num  pp-banner4" id="num_4 page5"> </div>
-    <div class="footerall num" id="num_5 page6">
+    <div class="num  pp-banner2" id="num_2 page3" name="page3"> </div>
+    <div class="num  pp-banner3" id="num_3 page4" name="page4"> </div>        
+   <div class="num  pp-banner4" id="num_4 page5" name="page5"> </div>
+    <div class="footerall num" id="num_5 page6" name="page6">
     <div class="footer">
     <div class="footer_allone">
     	<p class="footer_nav">
