@@ -7,15 +7,30 @@ class index_controller extends common{
         }
         global $CONFIG;
         $q=trim($_GET['q']);
+        $type=trim($_GET['type']);
+        $range=trim($_GET['range']);
         $M=$this->MODEL('article');
-        $sql="";
-        $datas=$M->DB_query_all("select * from (
-SELECT id,title,'cars' as con,lastupdate FROM `phpyun_cars_base` WHERE title like '%{$q}%' or content like '%{$q}%' or description like '%{$q}%'
-union
-SELECT id,title,'article' as con,lastupdate FROM `phpyun_news_base` WHERE title like '%{$q}%' or content like '%{$q}%' or description like '%{$q}%'
-union
-SELECT id,title,'school' as con,lastupdate FROM `phpyun_school_base` WHERE title like '%{$q}%' or content like '%{$q}%' or description like '%{$q}%'
-) a order by a.lastupdate desc ","all");//print_r($datas);
+
+        if($type=='school'){
+            if($range=="title"){
+                $sql="SELECT id,title,'school' as con,lastupdate FROM `phpyun_school_base` WHERE title like '%{$q}%' order by lastupdate desc";  
+            }else{
+                 $sql="SELECT id,title,'school' as con,lastupdate FROM `phpyun_school_base` WHERE title like '%{$q}%' or content like '%{$q}%' or description like '%{$q}%' order by lastupdate desc";  
+            }
+        }else if($type=='cars'){
+            if($range=="title"){
+                $sql="SELECT id,title,'school' as con,lastupdate FROM `phpyun_cars_base` WHERE title like '%{$q}%' order by lastupdate desc";  
+            }else{
+                 $sql="SELECT id,title,'school' as con,lastupdate FROM `phpyun_cars_base` WHERE title like '%{$q}%' or content like '%{$q}%' or description like '%{$q}%' order by lastupdate desc";  
+            }
+        }else{
+            if($range=="title"){
+                $sql="SELECT id,title,'school' as con,lastupdate FROM `phpyun_news_base` WHERE title like '%{$q}%' order by lastupdate desc";  
+            }else{
+                 $sql="SELECT id,title,'school' as con,lastupdate FROM `phpyun_news_base` WHERE title like '%{$q}%' or content like '%{$q}%' or description like '%{$q}%' order by lastupdate desc";  
+            }
+        }
+        $datas=$M->DB_query_all($sql,"all");
         $this->yunset('datas',$datas);
         $this->yunset('position_list',array(970,1660,2420,3215,3960,4630,5490,6350,7260));
         $this->yunset('adlist',$adlist_new);

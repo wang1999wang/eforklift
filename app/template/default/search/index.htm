@@ -265,6 +265,8 @@
                         <h2><a href="{yun:}url m=$one.con c=show id=$one.id{/yun}">{yun:}$one.title{/yun}</a></h2>
                         <a class="v_light_btn readmore" href="{yun:}url m=$one.con c=show id=$one.id{/yun}">查看详情</a>
                     </li>
+                    {yun:}foreachelse{/yun}
+                    <li>没有任何相关的新闻或者产品。</li>
                     {yun:}/foreach{/yun}
                 </ul>
             </div>

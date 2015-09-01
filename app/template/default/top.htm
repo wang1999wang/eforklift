@@ -10,7 +10,17 @@
                 <div id="vivo-head">
                     <div class="vivo-search">
                         <div class="search-box">
-                            <form action='/search' method='get' onSubmit="if ($.trim($(this).find('input').val()) == '') {alert('请输入关键词'); return false;} return true;"><input type="text" placeholder="如:E叉车租赁" name='q' class='data_q' autocomplete="off" /><button>搜索</button><a class="close"></a></form>
+                            <form action='/search' method='get' onSubmit="if ($.trim($(this).find('input').val()) == '') {alert('请输入关键词'); return false;} return true;">
+                            <select name="type" style=" height:37px;">
+                                <option value="article">E叉动态</option>
+                                <option value="school">E叉学堂</option>
+                                <option value="cars">叉车家族</option>
+                            </select>
+                            <select name="range" style=" height:37px;">
+                                <option value="title">标题</option>
+                                <option value="content">全文</option>
+                            </select>
+                            <input style="width:400px;" type="text" placeholder="如:E叉车租赁" name='q' class='data_q' autocomplete="off" /><button>搜索</button><a class="close"></a></form>
                             <div class="qk-results">
                                 <ul></ul>
                                 <div class="other-results"><a href="#">其他搜索结果</a></div>

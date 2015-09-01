@@ -79,8 +79,8 @@
 	</ul>
 </div>
 <div class="num_box">
-	<div class="num pp-banner1" id="num_0 page1" name="page1"></div>  
-    <div class="num" id="num_1 page2" style=" background-color:#f2f3f2" name="page2">
+	<div class="num pp-banner1" id="page1" name="page1"></div>  
+    <div class="num" id="page2" style=" background-color:#f2f3f2" name="page2">
     <div style="width:100%;position: relative;" >
             <img id="brand_pro" style="margin-left: -630px;" src="{yun:}$adlist[18].pic{/yun}" />
             <img id="brand_pro_txt" style="position: absolute;left:500px;top:105px;" src="{yun:}$adlist[8].pic{/yun}" />
@@ -94,35 +94,31 @@
         </div>
         
      </div>
-    <div class="num  pp-banner2" id="num_2 page3" name="page3"> </div>
-    <div class="num  pp-banner3" id="num_3 page4" name="page4"> </div>        
-   <div class="num  pp-banner4" id="num_4 page5" name="page5"> </div>
-    <div class="footerall num" id="num_5 page6" name="page6">
-    <div class="footer">
-    <div class="footer_allone">
-    	<p class="footer_nav">
-        	 <a href="http://www.e-forklift.cn/index.php">首页</a>
-                        |<a href="http://www.e-forklift.cn/index.php?m=about#page1">E叉品牌</a>
-                        |<a href="http://www.e-forklift.cn/cars/">叉车家族</a>
-                        |<a href="http://www.e-forklift.cn/school/">E叉学堂</a>
-                        |<a href="http://www.e-forklift.cn/index.php?m=yigou">E叉易购</a>
-                        |<a href="http://www.e-forklift.cn/index.php?m=hehuoren">E叉合伙人</a>
-                        |<a href="http://www.e-forklift.cn/index.php?m=contact">联系我们</a>
-        </p>
-        <p class="footer_alltwo">Copyright 2015 上海法阿姆物流设备有限公司. All right reserved.</p>
-        <p class="footer_alltwo">沪ICP备13007043号-2</p>
-    	<div class="footer_icno">
-        	<p class="footer_icno_p"><span>关注： </span>
-            <a class="footer_a1"></a>
-            <a class="footer_a2"></a>
-            <a class="footer_a3" id="fooo">         
-            </a> 
-             <div class="footer-weixin" id="foooo"><img src="http://www.e-forklift.cn/app/template/default/picture/liantu.jpg" width="113" height="113"></div>       
-            </p>
-            <p class="footer_icno_tel">全国服务热线：400-000-3129</p>
+    <div class="num  pp-banner2" id="page3" name="page3"> </div>
+    <div class="num  pp-banner3" id="page4" name="page4"> </div>        
+   <div class="num  pp-banner4" id="page5" name="page5"> </div>
+    <div class="footerall num">
+        <div class="footer">
+            <div class="wd">
+                <div class="lm-footer">
+                    <div class="sns-list">
+                        关注:
+                        <a class="sina" target="_blank" href="#"><b></b></a>
+                        <a class="tencent" target="_blank" href="#"><b></b></a>
+                        <a class="weixin"><b></b></a>
+                        <div class="weixin-overbox" style=""><img src="{yun:}$style{/yun}/picture/liantu.jpg" width="113" heith="113" /><b></b></div>
+                    </div>
+                    <div class="tel">全国服务热线：{yun:}$config.sy_freewebtel{/yun}</div>
+                    <p class="footer-nav">
+                        {yun:}nav item=navlist_app hovclass=nav_list_hover nid=2 key=key{/yun}
+                        {yun:}if $key>0{/yun}|{yun:}/if{/yun}<a href="{yun:}$navlist_app.url{/yun}">{yun:}$navlist_app.name{/yun}</a>
+                        {yun:}/nav{/yun}
+
+                    </p>
+                    <p>{yun:}$config.sy_webcopyright{/yun}<br />{yun:}$config.sy_webrecord{/yun}</p>
+                </div>
+            </div>
         </div>
-    </div>
-	</div>
 	</div>
 </div>
 <input type="hidden" value="0" class="ddw"/>
