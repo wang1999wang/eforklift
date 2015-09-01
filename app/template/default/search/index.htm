@@ -262,8 +262,8 @@
                 <ul class="list">
                     {yun:}foreach from=$datas item=one{/yun}
                     <li>
-                        <h2><a href="{yun:}url m=article c=show id=$one.id{/yun}">{yun:}$one.title{/yun}</a></h2>
-                        <a class="v_light_btn readmore" href="{yun:}url m=article c=show id=$one.id{/yun}">查看详情</a>
+                        <h2><a href="{yun:}url m=$one.con c=show id=$one.id{/yun}">{yun:}$one.title{/yun}</a></h2>
+                        <a class="v_light_btn readmore" href="{yun:}url m=$one.con c=show id=$one.id{/yun}">查看详情</a>
                     </li>
                     {yun:}/foreach{/yun}
                 </ul>
